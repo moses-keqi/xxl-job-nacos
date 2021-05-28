@@ -25,3 +25,7 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Run data jar
+      run: nohup java -jar ./xxl-job-executor-samples/xxl-job-executor-sample-springCloud/target/xxl-job-executor-sample-springCloud-1.0.0.jar &
+
